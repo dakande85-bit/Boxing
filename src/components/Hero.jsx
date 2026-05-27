@@ -4,15 +4,23 @@ import { routes } from '../data/routes.js';
 export default function Hero() {
   return (
     <section className="hero" aria-label="AURA Boxing hero">
-      <img src={assets.hero} alt="Aura Boxing Earned Not Given hero" />
-      <div className="sr-only">
-        <p>AURA BOXING</p>
-        <h1>EARNED, NOT GIVEN.</h1>
-        <p>THE CRAFT DOESN'T LIE.</p>
-        <p>DISCIPLINE / DEDICATION / SACRIFICE</p>
+      <div className="hero-media" aria-hidden="true">
+        <img src={assets.hero} alt="" />
       </div>
-      <a className="hero-link hero-link-shop" href={routes.drop001} aria-label="Shop Drop 001" />
-      <a className="hero-link hero-link-campaign" href={routes.campaign} aria-label="Explore Campaign" />
+
+      <div className="hero-content">
+        <p className="hero-label">AURA BOXING</p>
+        <h1>EARNED,<br />NOT GIVEN.</h1>
+        <p className="hero-subtitle">THE CRAFT DOESN'T LIE.</p>
+        <div className="hero-actions" aria-label="Hero actions">
+          <a className="hero-button hero-button-primary" href={routes.drop001}>SHOP DROP 001</a>
+          <a className="hero-button hero-button-secondary" href={routes.campaign}>EXPLORE CAMPAIGN</a>
+        </div>
+      </div>
+
+      <div className="hero-bottom-strip">
+        <span>DISCIPLINE / DEDICATION / SACRIFICE</span>
+      </div>
     </section>
   );
 }
