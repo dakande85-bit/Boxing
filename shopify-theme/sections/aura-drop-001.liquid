@@ -1,0 +1,110 @@
+{{ 'aura-drop-001.css' | asset_url | stylesheet_tag }}
+
+<section class="aura-drop" aria-label="AURA Drop 001">
+  <div class="aura-drop__hero">
+    <div class="aura-drop__copy">
+      <p class="aura-drop__label">DROP 001 / CORE COLLECTION</p>
+      <h1>BUILT FOR THE QUIET ROUNDS.</h1>
+      <p class="aura-drop__body">
+        A focused first release for the disciplined fighter. Minimal black training staples,
+        cold metallic branding, and a uniform built around work nobody sees.
+      </p>
+      <div class="aura-drop__actions">
+        <a href="/collections/drop-001" class="aura-drop__button aura-drop__button--light">SHOP DROP 001</a>
+        <a href="/pages/campaign" class="aura-drop__button aura-drop__button--ghost">EXPLORE CAMPAIGN</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="aura-drop__products" aria-label="Drop 001 product preview">
+    <article class="aura-drop__card">
+      <div class="aura-drop__image aura-drop__image--tee" aria-hidden="true"></div>
+      <div class="aura-drop__card-copy">
+        <p>CORE TOP</p>
+        <h2>AURA Fight Club Tee</h2>
+        <a href="/products/coming-soon">VIEW PIECE</a>
+      </div>
+    </article>
+
+    <article class="aura-drop__card">
+      <div class="aura-drop__image aura-drop__image--hoodie" aria-hidden="true"></div>
+      <div class="aura-drop__card-copy">
+        <p>WARMUP LAYER</p>
+        <h2>AURA Sleeveless Hoodie</h2>
+        <a href="/products/coming-soon">VIEW PIECE</a>
+      </div>
+    </article>
+
+    <article class="aura-drop__card">
+      <div class="aura-drop__image aura-drop__image--pants" aria-hidden="true"></div>
+      <div class="aura-drop__card-copy">
+        <p>TRAINING BASE</p>
+        <h2>AURA Training Pants</h2>
+        <a href="/products/coming-soon">VIEW PIECE</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="aura-drop__system" aria-label="AURA brand system">
+    <div>
+      <span>01</span>
+      <h2>TRAINING FIRST</h2>
+      <p>Built around movement, sweat, repetition, and the hours before anyone is watching.</p>
+    </div>
+    <div>
+      <span>02</span>
+      <h2>LIMITED NOISE</h2>
+      <p>Minimal forms, restrained marks, and a cold palette that keeps the work in focus.</p>
+    </div>
+    <div>
+      <span>03</span>
+      <h2>CONTROLLED RELEASE</h2>
+      <p>Small drops, deliberate pieces, and a launch rhythm shaped by scarcity and intent.</p>
+    </div>
+  </div>
+
+  <div class="aura-drop__newsletter" aria-label="Join AURA">
+    <div>
+      <p class="aura-drop__label">JOIN AURA</p>
+      <h2>EARLY ACCESS. LIMITED PIECES. NO NOISE.</h2>
+    </div>
+
+    {% form 'customer', class: 'aura-drop__form' %}
+      <input type="hidden" name="contact[tags]" value="newsletter, drop-001">
+      <label class="visually-hidden" for="AuraDropEmail">Email address</label>
+      <input
+        id="AuraDropEmail"
+        type="email"
+        name="contact[email]"
+        autocorrect="off"
+        autocapitalize="off"
+        autocomplete="email"
+        placeholder="EMAIL ADDRESS"
+        required
+      >
+      <button type="submit">JOIN</button>
+
+      {% if form.posted_successfully? %}
+        <p class="aura-drop__success">You're on the list.</p>
+      {% endif %}
+
+      {% if form.errors %}
+        <p class="aura-drop__error">{{ form.errors | default_errors }}</p>
+      {% endif %}
+    {% endform %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "AURA Drop 001",
+  "tag": "section",
+  "class": "section-aura-drop-001",
+  "settings": [],
+  "presets": [
+    {
+      "name": "AURA Drop 001"
+    }
+  ]
+}
+{% endschema %}
