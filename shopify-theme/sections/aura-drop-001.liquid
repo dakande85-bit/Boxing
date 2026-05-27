@@ -1,77 +1,211 @@
 {{ 'aura-drop-001.css' | asset_url | stylesheet_tag }}
 
-<section class="aura-drop" aria-label="AURA Drop 001">
-  <div class="aura-drop__hero">
-    <div class="aura-drop__copy">
-      <p class="aura-drop__label">DROP 001 / CORE COLLECTION</p>
-      <h1>BUILT FOR THE QUIET ROUNDS.</h1>
-      <p class="aura-drop__body">
-        A focused first release for the disciplined fighter. Minimal black training staples,
-        cold metallic branding, and a uniform built around work nobody sees.
-      </p>
+<div class="aura-drop" aria-label="AURA Drop 001">
+  <div class="aura-drop__announce">
+    DROP 001 NOW LIVE // LIMITED PIECES // NO AUDIENCE REQUIRED
+  </div>
+
+  <header class="aura-drop__header">
+    <a class="aura-drop__brand" href="/" aria-label="AURA home">
+      {% if section.settings.logo_image != blank %}
+        {{ section.settings.logo_image | image_url: width: 260 | image_tag: loading: 'eager', alt: 'AURA Boxing' }}
+      {% else %}
+        <span>AURA</span>
+        <small>BOXING</small>
+      {% endif %}
+    </a>
+
+    <nav class="aura-drop__nav" aria-label="Drop 001 navigation">
+      <a href="/collections/drop-001">Shop</a>
+      <a href="/pages/drop-001">Drop 001</a>
+      <a href="/pages/campaign">Campaign</a>
+      <a href="/pages/about">Brand</a>
+    </nav>
+
+    <div class="aura-drop__icons" aria-label="Store tools">
+      <a href="/search" aria-label="Search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg>
+      </a>
+      <a href="/account" aria-label="Account">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.8-4.2 4.4-6 8-6s6.2 1.8 8 6"></path></svg>
+      </a>
+      <a href="/cart" aria-label="Cart">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 14H7L6 7Z"></path><path d="M9 7a3 3 0 0 1 6 0"></path></svg>
+      </a>
+    </div>
+  </header>
+
+  <section class="aura-drop__hero" aria-label="Drop 001 hero">
+    <div class="aura-drop__hero-copy">
+      <p class="aura-drop__eyebrow">CORE COLLECTION</p>
+      <h1>DROP 001</h1>
+      <div class="aura-drop__hero-body">
+        <p>Earned, not given.</p>
+        <p>The first AURA BOXING release.</p>
+      </div>
       <div class="aura-drop__actions">
-        <a href="/collections/drop-001" class="aura-drop__button aura-drop__button--light">SHOP DROP 001</a>
-        <a href="/pages/campaign" class="aura-drop__button aura-drop__button--ghost">EXPLORE CAMPAIGN</a>
+        <a class="aura-drop__button aura-drop__button--light" href="/collections/drop-001">SHOP THE DROP</a>
+        <a class="aura-drop__button aura-drop__button--ghost" href="/pages/campaign">VIEW CAMPAIGN</a>
       </div>
     </div>
-  </div>
 
-  <div class="aura-drop__products" aria-label="Drop 001 product preview">
-    <article class="aura-drop__card">
-      <div class="aura-drop__image aura-drop__image--tee" aria-hidden="true"></div>
-      <div class="aura-drop__card-copy">
-        <p>CORE TOP</p>
-        <h2>AURA Fight Club Tee</h2>
-        <a href="/products/coming-soon">VIEW PIECE</a>
-      </div>
-    </article>
-
-    <article class="aura-drop__card">
-      <div class="aura-drop__image aura-drop__image--hoodie" aria-hidden="true"></div>
-      <div class="aura-drop__card-copy">
-        <p>WARMUP LAYER</p>
-        <h2>AURA Sleeveless Hoodie</h2>
-        <a href="/products/coming-soon">VIEW PIECE</a>
-      </div>
-    </article>
-
-    <article class="aura-drop__card">
-      <div class="aura-drop__image aura-drop__image--pants" aria-hidden="true"></div>
-      <div class="aura-drop__card-copy">
-        <p>TRAINING BASE</p>
-        <h2>AURA Training Pants</h2>
-        <a href="/products/coming-soon">VIEW PIECE</a>
-      </div>
-    </article>
-  </div>
-
-  <div class="aura-drop__system" aria-label="AURA brand system">
-    <div>
-      <span>01</span>
-      <h2>TRAINING FIRST</h2>
-      <p>Built around movement, sweat, repetition, and the hours before anyone is watching.</p>
+    <div class="aura-drop__hero-image">
+      {% if section.settings.hero_image != blank %}
+        {{ section.settings.hero_image | image_url: width: 1400 | image_tag: loading: 'eager', alt: 'AURA Drop 001 hero image' }}
+      {% else %}
+        <div class="aura-drop__image-placeholder">AURA DROP 001</div>
+      {% endif %}
     </div>
-    <div>
-      <span>02</span>
-      <h2>LIMITED NOISE</h2>
-      <p>Minimal forms, restrained marks, and a cold palette that keeps the work in focus.</p>
-    </div>
-    <div>
-      <span>03</span>
-      <h2>CONTROLLED RELEASE</h2>
-      <p>Small drops, deliberate pieces, and a launch rhythm shaped by scarcity and intent.</p>
-    </div>
-  </div>
+  </section>
 
-  <div class="aura-drop__newsletter" aria-label="Join AURA">
+  <section class="aura-drop__story" aria-label="Drop 001 campaign story">
+    <div class="aura-drop__story-image">
+      {% if section.settings.story_image != blank %}
+        {{ section.settings.story_image | image_url: width: 1100 | image_tag: loading: 'lazy', alt: 'AURA campaign image' }}
+      {% else %}
+        <div class="aura-drop__image-placeholder">CAMPAIGN IMAGE</div>
+      {% endif %}
+    </div>
+
+    <div class="aura-drop__story-copy">
+      <p class="aura-drop__eyebrow">AURA FIGHT CLUB</p>
+      <h2>BUILT IN THE DARK.</h2>
+      <p>Every piece in Drop 001 was designed for the work no one sees.</p>
+      <p>Discipline in silence.</p>
+      <p>Results in the ring.</p>
+      <a href="/pages/campaign">VIEW THE CAMPAIGN &rarr;</a>
+    </div>
+  </section>
+
+  <section class="aura-drop__collection" aria-label="The core collection">
+    <div class="aura-drop__section-head">
+      <h2>THE CORE COLLECTION</h2>
+      <p>5 PIECES</p>
+    </div>
+
+    <div class="aura-drop__grid">
+      <article class="aura-drop-card">
+        <a href="/products/coming-soon" aria-label="View Core Tee">
+          <div class="aura-drop-card__media">
+            {% if section.settings.product_1_image != blank %}
+              {{ section.settings.product_1_image | image_url: width: 900 | image_tag: loading: 'lazy', alt: 'Core Tee' }}
+            {% else %}
+              <div class="aura-drop-card__placeholder">Core Tee</div>
+            {% endif %}
+          </div>
+          <div class="aura-drop-card__meta">
+            <p>Core</p>
+            <h3>Core Tee</h3>
+            <span>$48.00</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="aura-drop-card">
+        <a href="/products/coming-soon" aria-label="View Core Hoodie">
+          <div class="aura-drop-card__media">
+            {% if section.settings.product_2_image != blank %}
+              {{ section.settings.product_2_image | image_url: width: 900 | image_tag: loading: 'lazy', alt: 'Core Hoodie' }}
+            {% else %}
+              <div class="aura-drop-card__placeholder">Core Hoodie</div>
+            {% endif %}
+          </div>
+          <div class="aura-drop-card__meta">
+            <p>Core</p>
+            <h3>Core Hoodie</h3>
+            <span>$98.00</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="aura-drop-card">
+        <a href="/products/coming-soon" aria-label="View Shadow Trainer">
+          <div class="aura-drop-card__media">
+            {% if section.settings.product_3_image != blank %}
+              {{ section.settings.product_3_image | image_url: width: 900 | image_tag: loading: 'lazy', alt: 'Shadow Trainer' }}
+            {% else %}
+              <div class="aura-drop-card__placeholder">Shadow Trainer</div>
+            {% endif %}
+          </div>
+          <div class="aura-drop-card__meta">
+            <p>Footwear</p>
+            <h3>Shadow Trainer</h3>
+            <span>$140.00</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="aura-drop-card">
+        <a href="/products/coming-soon" aria-label="View Training Wraps">
+          <div class="aura-drop-card__media">
+            {% if section.settings.product_4_image != blank %}
+              {{ section.settings.product_4_image | image_url: width: 900 | image_tag: loading: 'lazy', alt: 'Training Wraps' }}
+            {% else %}
+              <div class="aura-drop-card__placeholder">Training Wraps</div>
+            {% endif %}
+          </div>
+          <div class="aura-drop-card__meta">
+            <p>Essentials</p>
+            <h3>Training Wraps</h3>
+            <span>$24.00</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="aura-drop-card">
+        <a href="/products/coming-soon" aria-label="View Fight Gloves">
+          <div class="aura-drop-card__media">
+            {% if section.settings.product_5_image != blank %}
+              {{ section.settings.product_5_image | image_url: width: 900 | image_tag: loading: 'lazy', alt: 'Fight Gloves' }}
+            {% else %}
+              <div class="aura-drop-card__placeholder">Fight Gloves</div>
+            {% endif %}
+          </div>
+          <div class="aura-drop-card__meta">
+            <p>Training</p>
+            <h3>Fight Gloves</h3>
+            <span>$120.00</span>
+          </div>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <section class="aura-drop__system" aria-label="AURA brand system">
+    <div class="aura-drop__system-mantra">
+      <h2>DISCIPLINE.<br>DEDICATION.<br>SACRIFICE.</h2>
+      <p>NO SHORTCUTS.<br>NO EXCEPTIONS.</p>
+    </div>
+
+    <div class="aura-drop__system-blocks">
+      <article>
+        <span>01</span>
+        <h3>Discipline</h3>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Dedication</h3>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Sacrifice</h3>
+      </article>
+      <article>
+        <span>04</span>
+        <h3>No shortcuts. No exceptions.</h3>
+      </article>
+    </div>
+  </section>
+
+  <section class="aura-drop__newsletter" aria-label="Join AURA">
     <div>
-      <p class="aura-drop__label">JOIN AURA</p>
-      <h2>EARLY ACCESS. LIMITED PIECES. NO NOISE.</h2>
+      <p>JOIN AURA</p>
+      <h2>Early access. Limited pieces. No audience required.</h2>
     </div>
 
     {% form 'customer', class: 'aura-drop__form' %}
       <input type="hidden" name="contact[tags]" value="newsletter, drop-001">
-      <label class="visually-hidden" for="AuraDropEmail">Email address</label>
+      <label class="aura-drop__visually-hidden" for="AuraDropEmail">Email address</label>
       <input
         id="AuraDropEmail"
         type="email"
@@ -89,22 +223,63 @@
       {% endif %}
 
       {% if form.errors %}
-        <p class="aura-drop__error">{{ form.errors | default_errors }}</p>
+        <div class="aura-drop__error">{{ form.errors | default_errors }}</div>
       {% endif %}
     {% endform %}
-  </div>
-</section>
+  </section>
+
+  <footer class="aura-drop__footer">
+    <div class="aura-drop__footer-brand">
+      <span>AURA</span>
+      <small>BOXING</small>
+    </div>
+
+    <div class="aura-drop__footer-columns">
+      <nav aria-label="Shop links">
+        <h2>Shop</h2>
+        <a href="/collections/drop-001">Drop 001</a>
+        <a href="/shop">Shop All</a>
+        <a href="/products/coming-soon">Coming Soon</a>
+      </nav>
+      <nav aria-label="Brand links">
+        <h2>Brand</h2>
+        <a href="/pages/campaign">Campaign</a>
+        <a href="/pages/about">About</a>
+        <a href="/pages/join">Join Aura</a>
+      </nav>
+      <nav aria-label="Support links">
+        <h2>Support</h2>
+        <a href="/pages/contact">Contact</a>
+        <a href="/pages/size-guide">Size Guide</a>
+        <a href="/pages/shipping">Shipping</a>
+        <a href="/pages/returns">Returns</a>
+      </nav>
+      <nav aria-label="Legal links">
+        <h2>Legal</h2>
+        <a href="/pages/privacy-policy">Privacy Policy</a>
+        <a href="/pages/terms">Terms</a>
+      </nav>
+    </div>
+  </footer>
+</div>
 
 {% schema %}
 {
   "name": "AURA Drop 001",
   "tag": "section",
   "class": "section-aura-drop-001",
-  "settings": [],
+  "settings": [
+    { "type": "image_picker", "id": "logo_image", "label": "Logo image" },
+    { "type": "image_picker", "id": "hero_image", "label": "Hero image" },
+    { "type": "image_picker", "id": "story_image", "label": "Story image" },
+    { "type": "image_picker", "id": "product_1_image", "label": "Core Tee image" },
+    { "type": "image_picker", "id": "product_2_image", "label": "Core Hoodie image" },
+    { "type": "image_picker", "id": "product_3_image", "label": "Shadow Trainer image" },
+    { "type": "image_picker", "id": "product_4_image", "label": "Training Wraps image" },
+    { "type": "image_picker", "id": "product_5_image", "label": "Fight Gloves image" }
+  ],
   "presets": [
-    {
-      "name": "AURA Drop 001"
-    }
+    { "name": "AURA Drop 001" }
   ]
 }
 {% endschema %}
