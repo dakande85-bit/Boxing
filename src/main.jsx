@@ -4,6 +4,7 @@ import App from './App.jsx';
 import './styles/global.css';
 import './styles/home.css';
 import './styles/hero-viewport.css';
+import './styles/drop.css';
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
