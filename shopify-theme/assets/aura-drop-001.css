@@ -1,0 +1,291 @@
+.aura-drop {
+  background: #050505;
+  color: #ededed;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: .08em;
+}
+
+.aura-drop a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.aura-drop__hero {
+  min-height: min(760px, calc(100svh - 72px));
+  display: grid;
+  align-items: center;
+  padding: clamp(72px, 10vw, 132px) clamp(22px, 5vw, 78px);
+  background:
+    linear-gradient(90deg, rgba(5, 5, 5, .96) 0%, rgba(5, 5, 5, .78) 42%, rgba(5, 5, 5, .24) 100%),
+    radial-gradient(circle at 78% 34%, rgba(190, 190, 190, .18), transparent 34%),
+    linear-gradient(135deg, #050505 0%, #111 52%, #030303 100%);
+  border-bottom: 1px solid #222;
+}
+
+.aura-drop__copy {
+  width: min(690px, 100%);
+}
+
+.aura-drop__label {
+  margin: 0 0 22px;
+  color: #9c9c9c;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .34em;
+  text-transform: uppercase;
+}
+
+.aura-drop h1 {
+  margin: 0;
+  color: #f1f1f1;
+  font-size: clamp(48px, 7vw, 108px);
+  line-height: .94;
+  font-weight: 900;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+
+.aura-drop__body {
+  width: min(620px, 100%);
+  margin: 30px 0 0;
+  color: #b8b8b8;
+  font-size: clamp(15px, 1.4vw, 18px);
+  line-height: 1.9;
+  letter-spacing: .05em;
+}
+
+.aura-drop__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 42px;
+}
+
+.aura-drop__button {
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  border: 1px solid #d8d8d8;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.aura-drop__button--light {
+  background: #e5e5e5;
+  color: #080808;
+}
+
+.aura-drop__button--ghost {
+  background: transparent;
+  color: #ededed;
+  border-color: #5f5f5f;
+}
+
+.aura-drop__products {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  padding: clamp(72px, 8vw, 112px) clamp(22px, 5vw, 78px);
+  border-bottom: 1px solid #222;
+  background: #080808;
+}
+
+.aura-drop__card {
+  min-width: 0;
+  border: 1px solid #262626;
+  background: #101010;
+}
+
+.aura-drop__image {
+  aspect-ratio: 1 / 1.16;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(225, 225, 225, .18), transparent 29%),
+    linear-gradient(150deg, #181818, #050505 68%);
+  border-bottom: 1px solid #242424;
+}
+
+.aura-drop__image--tee {
+  background:
+    radial-gradient(circle at 50% 30%, rgba(210, 210, 210, .22), transparent 24%),
+    linear-gradient(160deg, #171717, #030303 72%);
+}
+
+.aura-drop__image--hoodie {
+  background:
+    radial-gradient(circle at 45% 26%, rgba(180, 180, 180, .18), transparent 30%),
+    linear-gradient(145deg, #1a1a1a, #050505 70%);
+}
+
+.aura-drop__image--pants {
+  background:
+    radial-gradient(circle at 50% 52%, rgba(170, 170, 170, .14), transparent 33%),
+    linear-gradient(150deg, #151515, #030303 72%);
+}
+
+.aura-drop__card-copy {
+  padding: 22px;
+}
+
+.aura-drop__card-copy p,
+.aura-drop__system span {
+  margin: 0 0 12px;
+  color: #858585;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+}
+
+.aura-drop__card-copy h2 {
+  margin: 0;
+  color: #f2f2f2;
+  font-size: clamp(18px, 2vw, 26px);
+  line-height: 1.1;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.aura-drop__card-copy a {
+  display: inline-flex;
+  margin-top: 24px;
+  border-bottom: 1px solid #777;
+  padding-bottom: 8px;
+  color: #dcdcdc;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .24em;
+}
+
+.aura-drop__system {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: #252525;
+  border-bottom: 1px solid #222;
+}
+
+.aura-drop__system > div {
+  min-height: 270px;
+  padding: clamp(34px, 5vw, 58px);
+  background: #060606;
+}
+
+.aura-drop__system h2 {
+  margin: 0;
+  color: #ededed;
+  font-size: clamp(24px, 3vw, 42px);
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.aura-drop__system p {
+  margin: 24px 0 0;
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: .05em;
+}
+
+.aura-drop__newsletter {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(320px, .7fr);
+  gap: clamp(28px, 6vw, 84px);
+  align-items: center;
+  padding: clamp(72px, 8vw, 116px) clamp(22px, 5vw, 78px);
+  background:
+    linear-gradient(90deg, rgba(5, 5, 5, .94), rgba(5, 5, 5, .7)),
+    linear-gradient(135deg, #111, #050505 70%);
+}
+
+.aura-drop__newsletter h2 {
+  max-width: 760px;
+  margin: 0;
+  color: #ededed;
+  font-size: clamp(32px, 4.6vw, 72px);
+  line-height: 1;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.aura-drop__form {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  border: 1px solid #777;
+}
+
+.aura-drop__form input {
+  min-height: 58px;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: #ededed;
+  padding: 0 20px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .2em;
+}
+
+.aura-drop__form input::placeholder {
+  color: #8f8f8f;
+}
+
+.aura-drop__form button {
+  min-height: 58px;
+  border: 0;
+  border-left: 1px solid #777;
+  background: #e5e5e5;
+  color: #070707;
+  padding: 0 28px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .2em;
+  cursor: pointer;
+}
+
+.aura-drop__success,
+.aura-drop__error {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  margin: 0;
+  color: #b8b8b8;
+  font-size: 12px;
+  letter-spacing: .12em;
+}
+
+.aura-drop__error {
+  color: #d8a5a5;
+}
+
+@media (max-width: 989px) {
+  .aura-drop__products,
+  .aura-drop__system,
+  .aura-drop__newsletter {
+    grid-template-columns: 1fr;
+  }
+
+  .aura-drop__hero {
+    min-height: 660px;
+  }
+}
+
+@media (max-width: 640px) {
+  .aura-drop__actions,
+  .aura-drop__form {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .aura-drop__form button {
+    border-left: 0;
+    border-top: 1px solid #777;
+  }
+}
