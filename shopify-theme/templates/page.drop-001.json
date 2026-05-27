@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "aura-drop-001",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
